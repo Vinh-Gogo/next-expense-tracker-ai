@@ -68,7 +68,7 @@ async function addExpenseRecord(formData: FormData): Promise<RecordResult> {
         amount,
         category,
         date, // Save the date to the database
-        userId,
+        userID: userId, // Associate the record with the logged-in user
       },
     });
 
