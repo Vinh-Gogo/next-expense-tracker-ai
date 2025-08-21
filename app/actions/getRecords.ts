@@ -15,7 +15,7 @@ async function getRecords(): Promise<{
 
   try {
     const records = await db.record.findMany({
-      where: { userID: userId },
+      where: { userID: userId }, // Ensure the field name matches the database schema
       orderBy: {
         date: 'desc', // Sort by the `date` field in descending order
       },
