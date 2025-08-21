@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Next Expense Tracker AI
 
-First, run the development server:
+## Công nghệ sử dụng
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **Prisma ORM**
+- **SQLite** (phát triển local) / **Vercel Postgres** (triển khai production)
+- **Tailwind CSS**
+- **Clerk** (xác thực người dùng)
+- **OpenAI API** (AI Insights)
+- **Chart.js** (biểu đồ)
+- **Vercel** (triển khai)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 10 bước xây dựng dự án
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Khởi tạo dự án Next.js với TypeScript**
+	- `npx create-next-app@latest --typescript`
+2. **Cấu hình Tailwind CSS**
+	- Cài đặt và cấu hình Tailwind cho Next.js.
+3. **Thiết kế database với Prisma**
+	- Định nghĩa schema cho bảng `Record` và các bảng liên quan.
+4. **Tạo và migrate database**
+	- Chạy lệnh `npx prisma migrate dev` để tạo bảng.
+5. **Tích hợp xác thực với Clerk**
+	- Đăng ký ứng dụng trên Clerk, cấu hình môi trường và thêm middleware xác thực.
+6. **Xây dựng UI cơ bản**
+	- Tạo các component: Navbar, Footer, AddNewRecord, RecordHistory, v.v.
+7. **Kết nối backend với Prisma**
+	- Tạo các API route hoặc server actions để thao tác dữ liệu (thêm, xoá, lấy record).
+8. **Tích hợp AI Insights với OpenAI API**
+	- Tạo action gọi OpenAI để sinh insight từ dữ liệu chi tiêu.
+9. **Hiển thị biểu đồ với Chart.js**
+	- Tạo các biểu đồ thống kê chi tiêu theo thời gian, loại, v.v.
+10. **Triển khai lên Vercel**
+	 - Kết nối repo với Vercel, cấu hình biến môi trường, deploy và kiểm tra hoạt động.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Link deployment
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[https://next-expense-tracker-ai-git-main-vinh-gogos-projects.vercel.app](https://next-expense-tracker-ai-git-main-vinh-gogos-projects.vercel.app)
