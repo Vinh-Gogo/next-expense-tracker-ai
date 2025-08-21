@@ -1,5 +1,6 @@
 'use client';
 
+import { generateInsightAnswer } from '@/app/actions/generateInsightAnswer';
 import { useState, useEffect } from 'react';
 // import { getAIInsights } from '@/app/actions/getAIInsights';
 // import { generateInsightAnswer } from '@/app/actions/generateInsightAnswer';

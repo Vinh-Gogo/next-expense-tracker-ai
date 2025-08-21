@@ -88,8 +88,8 @@ export default async function HomePage() {
           {/* Right Column - Stacked below on mobile */}
           <div className='space-y-4 sm:space-y-6'>
             {/* Expense Analytics */}
-            {/* <RecordChart /> */}
-            {/* <ExpenseStats /> */}
+            <RecordChart />
+            <ExpenseStats />
           </div>
         </div>
 
