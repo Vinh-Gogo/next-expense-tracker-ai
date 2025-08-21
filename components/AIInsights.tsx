@@ -1,9 +1,8 @@
 'use client';
 
-import { generateInsightAnswer } from '@/app/actions/generateInsightAnswer';
 import { useState, useEffect } from 'react';
-// import { getAIInsights } from '@/app/actions/getAIInsights';
-// import { generateInsightAnswer } from '@/app/actions/generateInsightAnswer';
+import { getAIInsights } from '@/app/actions/getAIInsights';
+import { generateInsightAnswer } from '@/app/actions/generateInsightAnswer';
 
 interface InsightData {
   id: string;
@@ -28,26 +27,26 @@ const AIInsights = () => {
 
   const loadInsights = async () => {
     setIsLoading(true);
-    // try {
-    //   const newInsights = await getAIInsights();
-    //   setInsights(newInsights);
-    //   setLastUpdated(new Date());
-    // } catch (error) {
-    //   console.error('❌ AIInsights: Failed to load AI insights:', error);
-    //   // Fallback to mock data if AI fails
-    //   setInsights([
-    //     {
-    //       id: 'fallback-1',
-    //       type: 'info',
-    //       title: 'AI Temporarily Unavailable',
-    //       message:
-    //         "We're working to restore AI insights. Please check back soon.",
-    //       action: 'Try again later',
-    //     },
-    //   ]);
-    // } finally {
-    //   setIsLoading(false);
-    // }
+    try {
+      const newInsights = await getAIInsights();
+      setInsights(newInsights);
+      setLastUpdated(new Date());
+    } catch (error) {
+      console.error('❌ AIInsights: Failed to load AI insights:', error);
+      // Fallback to mock data if AI fails
+      setInsights([
+        {
+          id: 'fallback-1',
+          type: 'info',
+          title: 'AI Temporarily Unavailable',
+          message:
+            "We're working to restore AI insights. Please check back soon.",
+          action: 'Try again later',
+        },
+      ]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleActionClick = async (insight: InsightData) => {

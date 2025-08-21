@@ -17,7 +17,7 @@ async function deleteRecord(recordId: string): Promise<{
     await db.record.delete({
       where: {
         id: recordId,
-        userId,
+        userID: userId, // Ensure the record belongs to the authenticated user
       },
     });
 
