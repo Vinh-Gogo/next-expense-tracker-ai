@@ -1,41 +1,42 @@
 
+
 # Next Expense Tracker AI
 
-## Công nghệ sử dụng
+## 🚀 Technologies Used
 
 - **Next.js 14** (App Router)
 - **TypeScript**
 - **Prisma ORM**
-- **SQLite** (phát triển local) / **Vercel Postgres** (triển khai production)
+- **SQLite** (local development) / **Vercel Postgres** (production)
 - **Tailwind CSS**
-- **Clerk** (xác thực người dùng)
+- **Clerk** (user authentication)
 - **OpenAI API** (AI Insights)
-- **Chart.js** (biểu đồ)
-- **Vercel** (triển khai)
+- **Chart.js** (charts & graphs)
+- **Vercel** (deployment)
 
-## 10 bước xây dựng dự án
+## 🛠️ 10 Steps to Build the Project
 
-1. **Khởi tạo dự án Next.js với TypeScript**
-	- `npx create-next-app@latest --typescript`
-2. **Cấu hình Tailwind CSS**
-	- Cài đặt và cấu hình Tailwind cho Next.js.
-3. **Thiết kế database với Prisma**
-	- Định nghĩa schema cho bảng `Record` và các bảng liên quan.
-4. **Tạo và migrate database**
-	- Chạy lệnh `npx prisma migrate dev` để tạo bảng.
-5. **Tích hợp xác thực với Clerk**
-	- Đăng ký ứng dụng trên Clerk, cấu hình môi trường và thêm middleware xác thực.
-6. **Xây dựng UI cơ bản**
-	- Tạo các component: Navbar, Footer, AddNewRecord, RecordHistory, v.v.
-7. **Kết nối backend với Prisma**
-	- Tạo các API route hoặc server actions để thao tác dữ liệu (thêm, xoá, lấy record).
-8. **Tích hợp AI Insights với OpenAI API**
-	- Tạo action gọi OpenAI để sinh insight từ dữ liệu chi tiêu.
-9. **Hiển thị biểu đồ với Chart.js**
-	- Tạo các biểu đồ thống kê chi tiêu theo thời gian, loại, v.v.
-10. **Triển khai lên Vercel**
-	 - Kết nối repo với Vercel, cấu hình biến môi trường, deploy và kiểm tra hoạt động.
+1. ✨ **Initialize Next.js Project with TypeScript**  
+	`npx create-next-app@latest --typescript`
+2. 🎨 **Configure Tailwind CSS**  
+	Install and set up Tailwind for Next.js.
+3. 🗄️ **Design Database with Prisma**  
+	Define schema for `Record` and related tables.
+4. 🏗️ **Create & Migrate Database**  
+	Run `npx prisma migrate dev` to create tables.
+5. 🔐 **Integrate Authentication with Clerk**  
+	Register app on Clerk, set environment variables, add middleware.
+6. 🧩 **Build Basic UI**  
+	Create components: Navbar, Footer, AddNewRecord, RecordHistory, etc.
+7. 🔗 **Connect Backend with Prisma**  
+	Create API routes or server actions for data operations (add, delete, fetch records).
+8. 🤖 **Integrate AI Insights with OpenAI API**  
+	Add actions to call OpenAI for generating insights from expenses.
+9. 📊 **Display Charts with Chart.js**  
+	Visualize expenses by time, category, etc.
+10. 🚢 **Deploy to Vercel**  
+	 Connect repo to Vercel, set environment variables, deploy, and test.
 
-## Link deployment
+## 🌐 Deployment
 
-[https://next-expense-tracker-ai-git-main-vinh-gogos-projects.vercel.app](https://next-expense-tracker-ai-git-main-vinh-gogos-projects.vercel.app)
+[Live Demo](https://next-expense-tracker-ai-git-main-vinh-gogos-projects.vercel.app)
